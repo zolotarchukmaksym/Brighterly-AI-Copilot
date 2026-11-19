@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brighterly Support Copilot</title>
+<meta name="description" content="Customer chat and live AI activity log in one view.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-shield-alert" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"/><path d="M12 8v4M12 15.5v.01"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 4.9 4.9L21 13l-3 3-1.6-1.6a4 4 0 0 1-4.9-4.9L9 8 3 14l3 3 6-6"/><path d="M9.5 5.5l3 3"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0L5 7zM19 7l-3 7a3.5 3.5 0 0 0 6 0l-3-7z"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h4"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19l-4 1z"/><path d="M14 7l3 3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 9V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3a3 3 0 0 0 0 6v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3a3 3 0 0 0 0-6z"/><path d="M14 5v14" stroke-dasharray="2 2"/></symbol>
+    <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 16.5v.01"/></symbol>
+    <symbol id="i-siren" viewBox="0 0 24 24"><path d="M6 18v-5a6 6 0 0 1 12 0v5M4 18h16v3H4zM12 3v2M4.5 6.5L6 8M19.5 6.5L18 8"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 17-3-7-7-2z"/><path d="M11 14l9-10"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4l2-2M20 20v-5h-5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8V4z"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.01"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 24 24"><path d="M12 2.5l2.4 6.1 6.1 2.4-6.1 2.4L12 19.5l-2.4-6.1L3.5 11l6.1-2.4L12 2.5z" fill="currentColor" stroke="none"/><circle cx="19" cy="19" r="2" fill="currentColor" stroke="none"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#chat-input">Skip to message box</a>
+
+<header class="topbar">
+  <div class="brand"><svg class="ico brand-ico" aria-hidden="true"><use href="#i-logo"/></svg><span class="brand-name">Brighterly Support Copilot</span></div>
+  <div class="topbar-controls">
+    <label class="field"><span class="sr-only">Customer</span>
+      <select id="customer-select" aria-label="Demo customer"></select></label>
+    <div class="menu" id="scenario-menu">
+      <button class="btn btn-secondary btn-sm" id="scenario-btn" aria-haspopup="true" aria-expanded="false"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>Scenarios<svg class="ico ico-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+      <div class="menu-pop" id="scenario-pop" role="menu" hidden></div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span class="badge" id="provider-badge" title="LLM provider"><svg class="ico" aria-hidden="true"><use href="#i-cpu"/></svg><span>AI: …</span></span>
+    <span class="badge badge-muted" id="now-badge" title="Demo clock (DEMO_NOW)">…</span>
+    <button class="btn btn-ghost btn-sm" id="qa-btn" disabled><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>End conversation &amp; run QA</button>
+    <button class="btn btn-ghost btn-sm" id="reset-btn"><svg class="ico" aria-hidden="true"><use href="#i-refresh"/></svg>Reset demo</button>
+  </div>
+</header>
+
+<nav class="mobile-tabs" role="tablist" aria-label="View">
+  <button role="tab" id="tab-chat" aria-selected="true" data-tab="chat">Chat</button>
+  <button role="tab" id="tab-log" aria-selected="false" data-tab="log">AI Log <span class="dot-new" id="log-new" hidden></span></button>
+</nav>
+
+<main class="split" id="split" data-active="chat">
+  <section class="panel theme-light" id="chat-panel" aria-label="Customer chat">
+    <div class="panel-head">
+      <div class="panel-title"><span class="avatar" id="cust-avatar" aria-hidden="true">?</span>
+        <div><h1 class="h-title" id="cust-name">Customer chat</h1><p class="h-sub" id="cust-sub">Choose a customer or scenario</p></div></div>
+      <span class="chip" id="convo-status" hidden></span>
+    </div>
+    <div class="messages" id="messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <form class="composer" id="composer" autocomplete="off">
+      <label class="sr-only" for="chat-input">Message</label>
+      <textarea id="chat-input" rows="1" maxlength="2000" placeholder="Write as the customer…"></textarea>
+      <button class="btn btn-primary" id="send-btn" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg><span>Send</span></button>
+    </form>
+  </section>
+
+  <div class="splitter" id="splitter" role="separator" aria-orientation="vertical" aria-label="Resize panels" tabindex="0"></div>
+
+  <section class="panel theme-dark" id="log-panel" aria-label="AI activity log">
+    <div class="panel-head">
+      <div class="panel-title"><div><h2 class="h-title">AI Activity Log <span class="live"><i></i>live</span></h2>
+        <p class="h-sub" id="metrics">Every step of the real pipeline streams here</p></div></div>
+      <div class="log-tools">
+        <div class="seg" id="filters" role="group" aria-label="Filter steps">
+          <button data-f="all" aria-pressed="true">All</button><button data-f="tools" aria-pressed="false">Tools</button>
+          <button data-f="guards" aria-pressed="false">Guardrails</button><button data-f="human" aria-pressed="false">Human</button>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="autoscroll-btn" aria-pressed="true" title="Auto-scroll to newest step"><svg class="ico" aria-hidden="true"><use href="#i-pause"/></svg><span>Auto-scroll on</span></button>
+      </div>
+    </div>
+    <div class="log" id="log" aria-live="off"></div>
+  </section>
+</main>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

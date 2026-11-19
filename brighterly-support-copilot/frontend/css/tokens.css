@@ -1,0 +1,35 @@
+/* Design tokens. One brand accent (indigo) + semantic colors for autonomy levels. */
+:root {
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 20px; --sp-6: 24px; --sp-8: 32px;
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px; --r-pill: 999px;
+
+  --fs-xs: 11.5px; --fs-sm: 12.5px; --fs-md: 14px; --fs-lg: 16px; --fs-xl: 19px;
+
+  --accent: #4f46e5; --accent-strong: #4338ca; --accent-soft: #eef2ff; --on-accent: #ffffff;
+  --live: #14b8a6;
+
+  --topbar-bg: #0b1020; --topbar-fg: #e6ebf8; --topbar-muted: #9aa7c7; --topbar-border: #1c2547;
+}
+
+/* Light panel (customer chat) */
+.theme-light {
+  --bg: #f1f4fa; --surface: #ffffff; --surface-2: #f6f8fc; --surface-3: #eef2f8;
+  --text: #0f172a; --muted: #475569; --faint: #64748b; --border: #dfe5ef; --border-strong: #c9d2e2;
+  --bubble-ai: #ffffff; --bubble-me: #4f46e5; --bubble-me-fg: #ffffff;
+  --shadow-1: 0 1px 2px rgba(15,23,42,.06); --shadow-2: 0 4px 14px rgba(15,23,42,.08); --shadow-3: 0 14px 34px rgba(15,23,42,.14);
+  --c-auto-bg: #dcfce7; --c-auto-fg: #166534; --c-confirm-bg: #dbeafe; --c-confirm-fg: #1e40af;
+  --c-human-bg: #fef3c7; --c-human-fg: #92400e; --c-danger-bg: #fee2e2; --c-danger-fg: #991b1b;
+  --c-neutral-bg: #eef2f8; --c-neutral-fg: #334155; --focus: #4f46e5;
+}
+/* Dark panel (AI mission control) */
+.theme-dark {
+  --bg: #0a0f1f; --surface: #111831; --surface-2: #151e3b; --surface-3: #1b2547;
+  --text: #e6ebf8; --muted: #a3afcf; --faint: #8794b8; --border: #232e52; --border-strong: #33417a;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.4); --shadow-2: 0 6px 18px rgba(0,0,0,.35); --shadow-3: 0 16px 40px rgba(0,0,0,.5);
+  --c-auto-bg: rgba(34,197,94,.14); --c-auto-fg: #4ade80; --c-confirm-bg: rgba(96,165,250,.16); --c-confirm-fg: #93c5fd;
+  --c-human-bg: rgba(251,191,36,.15); --c-human-fg: #fcd34d; --c-danger-bg: rgba(248,113,113,.16); --c-danger-fg: #fca5a5;
+  --c-neutral-bg: #1b2547; --c-neutral-fg: #c3cdea; --focus: #818cf8;
+}
